@@ -1,0 +1,22 @@
+New-Item `
+    -ItemType Directory `
+    -Force `
+    -Path 'C:\projects\windows-jar-service'
+
+Set-Location `
+    'C:\projects\windows-jar-service'
+
+
+
+dotnet new sln `
+    --name 'JarServiceManager'
+
+
+
+dotnet new gitignore
+
+dotnet new editorconfig
+
+git init
+
+git branch -M main
