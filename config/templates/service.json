@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "service": {
+    "id": "my-java-service",
+    "displayName": "My Java Service",
+    "description": "Runs application.jar as a Windows service.",
+    "startMode": "automaticDelayedStart"
+  },
+  "java": {
+    "executablePath": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.7-hotspot\\bin\\java.exe",
+    "jvmArguments": [
+      "-Xms256m",
+      "-Xmx1024m",
+      "-XX:+ExitOnOutOfMemoryError"
+    ]
+  },
+  "application": {
+    "jarPath": "C:\\projects\\calculos-ritmo-jc\\target\\ritm-0.0.1-SNAPSHOT.jar",
+    "workingDirectory": "C:\\projects\\calculos-ritmo-jc\\target",
+    "arguments": [
+      "--spring.profiles.active=prod"
+      "indicar puerto 8080"
+    ],
+    "environmentVariables": {}
+  },
+  "timeouts": {
+    "startupSeconds": 120,
+    "shutdownSeconds": 30,
+    "forceKillAfterShutdownTimeout": true
+  },
+  "restart": {
+    "policy": "onFailure",
+    "maximumAttempts": 5,
+    "resetAfterMinutes": 30,
+    "initialDelaySeconds": 10,
+    "maximumDelaySeconds": 300
+  },
+  "healthCheck": {
+    "enabled": false,
+    "type": "httpJson",
+    "url": "http://127.0.0.1:8080/api/heartbeat",
+    "intervalSeconds": 30,
+    "timeoutSeconds": 5,
+    "failureThreshold": 3,
+    "expectedStatusCode": 200,
+    "expectedJsonProperty": "status",
+    "expectedJsonValue": "UP"
+  },
+  "logs": {
+    "directory": "C:\\ProgramData\\suzdalenko-dev\\Windows JAR Service Manager\\logs\\my-java-service",
+    "maximumFileSizeMegabytes": 20,
+    "retainedFileCount": 10
+  }
+}
