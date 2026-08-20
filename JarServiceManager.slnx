@@ -1,2 +1,7 @@
 <Solution>
+  <Folder Name="/src/">
+    <Project Path="src/JarServiceManager.Core/JarServiceManager.Core.csproj" />
+    <Project Path="src/JarServiceManager.Desktop/JarServiceManager.Desktop.csproj" />
+    <Project Path="src/JarServiceManager.ServiceHost/JarServiceManager.ServiceHost.csproj" />
+  </Folder>
 </Solution>
