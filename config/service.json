@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "service": {
-    "id": "my-java-service",
-    "displayName": "My Java Service",
-    "description": "Runs application.jar as a Windows service.",
+    "id": "calculos-ritmo-jc",
+    "displayName": "Calculos Ritmo JC",
+    "description": "Runs the Calculos Ritmo JC Spring Boot application as a Windows service.",
     "startMode": "automaticDelayedStart"
   },
   "java": {
@@ -18,8 +18,9 @@
     "jarPath": "C:\\projects\\calculos-ritmo-jc\\target\\ritm-0.0.1-SNAPSHOT.jar",
     "workingDirectory": "C:\\projects\\calculos-ritmo-jc\\target",
     "arguments": [
-      "--spring.profiles.active=prod"
-      "indicar puerto 8080"
+      "--spring.profiles.active=prod",
+      "--server.address=192.168.1.98",
+      "--server.port=8080"
     ],
     "environmentVariables": {}
   },
@@ -36,18 +37,18 @@
     "maximumDelaySeconds": 300
   },
   "healthCheck": {
-    "enabled": false,
+    "enabled": true,
     "type": "httpJson",
-    "url": "http://127.0.0.1:8080/api/heartbeat",
+    "url": "http://192.168.1.98:8080/api/heartbeat/java/",
     "intervalSeconds": 30,
     "timeoutSeconds": 5,
     "failureThreshold": 3,
     "expectedStatusCode": 200,
-    "expectedJsonProperty": "status",
+    "expectedJsonProperty": "res.status",
     "expectedJsonValue": "UP"
   },
   "logs": {
-    "directory": "C:\\ProgramData\\suzdalenko-dev\\Windows JAR Service Manager\\logs\\my-java-service",
+    "directory": "C:\\ProgramData\\suzdalenko-dev\\Windows JAR Service Manager\\logs\\calculos-ritmo-jc",
     "maximumFileSizeMegabytes": 20,
     "retainedFileCount": 10
   }
