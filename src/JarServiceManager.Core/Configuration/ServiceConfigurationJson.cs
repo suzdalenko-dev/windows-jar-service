@@ -15,7 +15,8 @@ public static class ServiceConfigurationJson
             PropertyNameCaseInsensitive = true,
             WriteIndented = true,
             AllowTrailingCommas = false,
-            UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow
+            UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow,
+            RespectNullableAnnotations = true
         };
 
         options.Converters.Add(
