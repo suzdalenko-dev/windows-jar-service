@@ -12,8 +12,7 @@ if (args.Length > 0 &&
             ? args[1]
             : Path.Combine("config", "service.json");
 
-    Environment.ExitCode =
-        await ValidateConfigurationAsync(configurationPath);
+    Environment.ExitCode = await ValidateConfigurationAsync(configurationPath);
 
     return;
 }
@@ -27,11 +26,8 @@ static async Task<int> ValidateConfigurationAsync(string configurationPath)
 {
     try
     {
-        var configuration =
-            await ServiceConfigurationLoader.LoadAsync(configurationPath);
-
-        var errors =
-            ServiceConfigurationValidator.Validate(configuration);
+        var configuration = await ServiceConfigurationLoader.LoadAsync(configurationPath);
+        var errors        = ServiceConfigurationValidator.Validate(configuration);
 
         if (errors.Count > 0)
         {
