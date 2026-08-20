@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JarServiceManager.Desktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+002f1854f1751ee5391355f0fa75e0f7a5c7261c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fb51f7f99e12a811154ce5cebe2e37032ee1bad")]
 [assembly: System.Reflection.AssemblyProductAttribute("JarServiceManager.Desktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JarServiceManager.Desktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

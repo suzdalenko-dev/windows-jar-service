@@ -1,5 +1,5 @@
 ﻿JarServiceManager.Desktop
-
+1.0.0.0
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_O
 C:\projects\windows-jar-service\src\JarServiceManager.Desktop\App.xaml
 11407045341
 
-42047732605
+61225535403
 207-1538685520
 MainWindow.xaml;
 
-False
+True
 
