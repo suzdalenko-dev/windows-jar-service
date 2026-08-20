@@ -1,3 +1,20 @@
+Orden de construcción que seguiremos
+Verificar herramientas y compilación.
+Crear service.default.json.
+Crear los modelos C# y el validador en Core.
+Leer el JSON desde ServiceHost.
+Ejecutar y detener java.exe -jar.
+Capturar logs y supervisar el proceso Java.
+Integrarlo como servicio real de Windows.
+Construir Desktop.
+Probarlo con calculos-ritmo-jc.
+Publicar los dos ejecutables.
+Crear WindowsJarServiceManager-Setup.exe con NSIS.
+
+
+
+
+-----------------------------------------
 New-Item `
     -ItemType Directory `
     -Force `
